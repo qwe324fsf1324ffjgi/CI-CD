@@ -1,0 +1,62 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling for different pages */
+.home {
+    background-color: #ffddc1;
+}
+
+.about {
+    background-color: #d4f1f4;
+}
+
+.contact {
+    background-color: #f4e1d2;
+}
+
+.error {
+    background-color: #f0a6ca;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Navigation Links */
+nav a {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #666;
+}
+
+/* Styling for 404 error page */
+.error h1 {
+    color: #fff;
+}
