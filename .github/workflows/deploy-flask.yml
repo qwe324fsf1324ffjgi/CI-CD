@@ -17,13 +17,13 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_secret_access_key: ${{ secrets.AWS }}
         aws_region: "us-east-1"  # Use your preferred AWS region
 
     - name: Deploy to EC2
       run: |
         # SSH into EC2 and perform deployment
-        ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_KEY }} ubuntu@${{ secrets.EC2_IP }} << EOF
+        ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2 }} ubuntu@${{ secrets.EC2_IP }} << EOF
         cd flask-app
         git pull origin master  # Pull the latest code from the main branch
         pip3 install -r requirements.txt  # Install any new dependencies
